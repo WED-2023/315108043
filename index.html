@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandfather's Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="o4yRN7ED">
+
+</script>
+    <div id="menu">
+        <div class="logo">
+            <img src="images/logo.jpeg" alt="Grandfather's Website Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">ABOUT ME</a></li>
+                <li><a href="#photos">MY PHOTOS</a></li>
+                <li><a href="#playlist">MY PLAYLIST</a></li>
+                <li><a href="#like">LIKE</a></li>
+                <li><a href="#qrcoder">QR CODE</a></li>
+                <li><a href="#spa">Q&A</a></li>
+                <li><a href="#contact">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <section id="about" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">About me</h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </section>
+        
+        <section id="photos" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">Photos</h1>
+        <div class="image-container">
+            <img src="images/pic1.jpg" alt="Pic 1">
+            <img src="images/pic2.jpg" alt="Pic 2">
+            <img src="images/pic3.jpg" alt="Pic 3">
+            <img src="images/pic4.jpg" alt="Pic 4">
+            <img src="images/pic5.jpg" alt="Pic 5">
+            <img src="images/pic6.jpg" alt="Pic 6">
+        </div>
+        </section>
+        
+        <section id="playlist" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">Playlist</h1>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FkH6YCg3n0Q?si=49HgcYtX3tfKt0kB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </section>
+        
+        <section id="like" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">Give me a like!</h1>
+        <div class="fb-like" data-href="https://www.facebook.com/facebook" data-height="300" data-layout="" data-action="" data-size="" data-share="false"></div>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </section>
+        
+        <section id="qrcoder" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">Scan my code</h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </section>
+        
+        <section id="spa" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">Q&A</h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </section>
+        
+        <section id="contact" class="section">
+        <br/><br/><br/><br/><br/><br/>
+        <h1 class="sectionTitle">Contact me</h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        </section>
+        
+        
+        <script type="text/javascript">
+        $(function(){
+          $("#nav a").click(function(e){
+            e.preventDefault();
+            $('html,body').scrollTo(this.hash,this.hash); 
+          });
+        });
+        </script>
+        <script type="text/javascript">
+         $(document).scroll(function() {
+            $('#menu').toggle($(this).scrollTop()>1000)
+         });
+         </script>
+
+</body>
+</html>
