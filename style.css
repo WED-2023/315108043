@@ -84,3 +84,51 @@ nav ul li a:hover {
     height: 400px; /* Specific height for each image */
     margin: 5px; /* Adjust margin as needed */
 }
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    padding: 8px 15px;
+    background-color: #faefbd;
+    color: #000;
+    border: #af940d;
+	border-width: 15px;
+    /* border-radius: 10px; */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #af940d;
+	color: #fff;
+}
+
+#status {
+    margin-top: 15px;
+    text-align: center;
+}

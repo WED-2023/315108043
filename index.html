@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grandfather's Website</title>
@@ -103,23 +104,27 @@
         <br/>
         <br/>
         <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
         </section>
         
         <section id="contact" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Contact me</h1>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <form action="mailto:yaelmari@post.bgu.ac.il" method="GET">
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <label for="emoji">Choose an Emoji:</label>
+            <select id="emoji" name="emoji">
+                <option value="😊">😊</option>
+                <option value="😄">😄</option>
+                <option value="😎">😎</option>
+                <option value="👍">👍</option>
+            </select>
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
         <br/>
         <br/>
         <br/>
@@ -136,11 +141,20 @@
             $('html,body').scrollTo(this.hash,this.hash); 
           });
         });
-        </script>
-        <script type="text/javascript">
-         $(document).scroll(function() {
-            $('#menu').toggle($(this).scrollTop()>1000)
-         });
+    
+        $(document).ready(function(){
+        $('#submitBtn').click(function(event){
+            event.preventDefault(); // Prevent the default form submission behavior
+            var email = $('#email').val();
+            var title = $('#title').val();
+            var message = $('#message').val();
+            var emoji = $('#emoji').val();
+            var subject = encodeURIComponent(title); // Set the title as the subject
+            var body = 'Message: ' + message + '\nEmoji: ' + emoji;
+            var mailtoLink = 'mailto:yaelmari@post.bgu.ac.il?subject=' + subject + '&body=' + encodeURIComponent(body);
+            window.open(mailtoLink);
+        });
+    });
          </script>
 
 </body>
