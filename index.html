@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Importing jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv='cache-control' content='no-cache'>
@@ -11,10 +12,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Facebook SDK for Like button -->
     <div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v19.0" nonce="o4yRN7ED">
 
 </script>
+    <!-- Navigation Menu -->
     <div id="menu">
         <div class="logo">
             <img src="images/logo.jpeg" alt="Grandfather's Website Logo">
@@ -32,6 +35,7 @@
         </nav>
     </div>
 
+    <!-- About Section -->
     <section id="about" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">About me</h1>
@@ -58,7 +62,7 @@
         
         
         </section>
-        
+        <!-- Photos Section -->
         <section id="photos" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Photos</h1>
@@ -82,20 +86,22 @@
         </div>
         </section>
         
+        <!-- Playlist Section -->
         <section id="playlist" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Playlist</h1>
-        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/FkH6YCg3n0Q?si=49HgcYtX3tfKt0kB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/RgopNZpgwwE?si=IsNG9MNPAqkQNbdK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/PEUhX3hZhuE?si=fIeyjMr0jv5fdi7j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="448" height="252" src="https://www.youtube-nocookie.com/embed/FkH6YCg3n0Q?si=49HgcYtX3tfKt0kB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="448" height="252" src="https://www.youtube.com/embed/RgopNZpgwwE?si=IsNG9MNPAqkQNbdK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="448" height="252" src="https://www.youtube.com/embed/PEUhX3hZhuE?si=fIeyjMr0jv5fdi7j" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
         
+        <!-- Like Section -->
         <section id="like" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Give me a like!</h1>
         <button id="likeBtn">Like 👍</button>
         <p id="likeCount">Likes: 0</p>
-        <div class="fb-like" data-href="https://www.facebook.com/facebook" data-height="300" data-layout="" data-action="" data-size="" data-share="false"></div>
+        <div class="fb-like" data-href="https://www.facebook.com/GoogleIL/?brand_redir=104958162837&locale=he_IL" data-height="300" data-layout="" data-action="" data-size="" data-share="false"></div>
         <br/>
         <br/>
         <br/>
@@ -103,6 +109,7 @@
         <br/>
         </section>
         
+        <!-- QR Code Section -->
         <section id="qrcoder" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Scan my code</h1>
@@ -111,6 +118,7 @@
         <br/>
         </section>
         
+        <!-- Q&A Section -->
         <section id="spa" class="section">
         <br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Q&A</h1>
@@ -138,9 +146,11 @@
         </h2>
         </section>
         
+        <!-- Contact Me Section -->
         <section id="contact" class="section">
         <br/><br/><br/><br/><br/><br/>
         <h1 class="sectionTitle">Contact me</h1>
+         <!-- Contact form -->
         <form action="mailto:yaelmari@post.bgu.ac.il" method="GET">
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" required>
@@ -171,10 +181,10 @@
         
         <script type="text/javascript">
         $(function(){
-          $("#nav a").click(function(e){
+        $("#nav a").click(function(e){
             e.preventDefault();
             $('html,body').scrollTo(this.hash,this.hash); 
-          });
+        });
         });
     
         $(document).ready(function(){
@@ -202,7 +212,7 @@
             localStorage.setItem('likeCount', likeCount);
             $('#likeCount').text('Likes: ' + likeCount);
         });
-    });
+        });
          </script>
 
 </body>
